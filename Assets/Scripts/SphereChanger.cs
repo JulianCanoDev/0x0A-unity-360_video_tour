@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
  
-public class SphereChanger : MonoBehaviour {
- 
- 
- 
+public class SphereChanger : MonoBehaviour
+{
     //This object should be called 'Fader' and placed over the camera
-    GameObject m_Fader;
+    private GameObject m_Fader;
  
     //This ensures that we don't mash to change spheres
-    bool changing = false;
+    //bool changing = false;
 
     void Awake()
     {
@@ -32,7 +30,6 @@ public class SphereChanger : MonoBehaviour {
  
     IEnumerator FadeCamera(Transform nextSphere)
     {
- 
         //Ensure we have a fader object
         if (m_Fader != null)
         {
